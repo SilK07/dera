@@ -34,6 +34,11 @@ class Loginpage extends StatelessWidget {
                   style: TextStyle(fontSize: 20),
                 ),
 
+                Text(
+                  "E D U C A T I O N",
+                  style: TextStyle(fontSize: 20),
+                ),
+
                 const SizedBox(height: 50),
 
                 // email textfield
@@ -58,19 +63,21 @@ class Loginpage extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
+                    //sign-in button
+                    MyButton(
+                      text: "Login",
+                      onTap: () {
+                        Navigator.pushNamed(context, '/home_page');
+                      },
+                    ),
+
+                    const SizedBox(width: 25),
+
                     Text(
                       "Forgot Password?",
                       style: TextStyle(
                           color: Theme.of(context).colorScheme.secondary),
-                    ),
-
-                    const SizedBox(height: 25),
-
-                    //sign-in button
-                    MyButton(
-                      text: "Login",
-                      onTap: () {},
-                    ),
+                    )
                   ],
                 ),
               ],

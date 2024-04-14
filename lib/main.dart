@@ -2,7 +2,9 @@ import 'package:dera/pages/dera_details.dart';
 import 'package:dera/pages/existing_search.dart';
 import 'package:dera/pages/family_details.dart';
 import 'package:dera/pages/home_page.dart';
+import 'package:dera/pages/login_page.dart';
 import 'package:dera/pages/new_form.dart';
+import 'package:dera/pages/profile_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -17,13 +19,15 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: home_page(),
+      home: Loginpage(),
       routes: {
+        '/login_page': (context) => Loginpage(),
         '/home_page': (context) => home_page(),
         '/new_form': (context) => new_form(),
         '/family_details': (context) => family_details(),
         '/dera_details': (context) => dera_details(),
-        '/existing_search': (context) => existing_search()
+        '/existing_search': (context) => existing_search(),
+        '/profile_page': (context) => profile_page(),
       },
     );
   }

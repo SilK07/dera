@@ -1,3 +1,4 @@
+import 'package:dera/pages/login_page.dart';
 import 'package:dera/pages/new_form.dart';
 import 'package:flutter/material.dart';
 
@@ -31,6 +32,18 @@ class home_page extends StatelessWidget {
             ListTile(
               leading: Icon(Icons.account_circle_rounded),
               title: Text("P R O F I L E"),
+              onTap: () {
+                Navigator.pop(context);
+                Navigator.pushNamed(context, '/profile_page');
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.logout),
+              title: Text('L O G O U T'),
+              onTap: () {
+                Navigator.pop(context);
+                Navigator.pushNamed(context, '/login_page');
+              },
             )
           ],
         ),
