@@ -8,8 +8,12 @@ class family_details extends StatefulWidget {
 }
 
 class _family_detailsState extends State<family_details> {
-  TextEditingController no_of_family_members = TextEditingController();
-  TextEditingController family_religion = TextEditingController();
+  TextEditingController name_f = TextEditingController();
+  TextEditingController age_f = TextEditingController();
+  TextEditingController gender_f = TextEditingController();
+  TextEditingController relation_f = TextEditingController();
+  TextEditingController aadhar_f = TextEditingController();
+  TextEditingController mobileNum_f = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -24,22 +28,62 @@ class _family_detailsState extends State<family_details> {
           child: ListView(
             children: [
               TextField(
-                controller: no_of_family_members,
+                controller: name_f,
                 decoration: InputDecoration(
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(50.0)),
-                    hintText: "Number Of Family Members"),
+                    hintText: "Name"),
               ),
               SizedBox(
                 height: 30,
               ),
               TextField(
-                controller: family_religion,
+                controller: age_f,
                 decoration: InputDecoration(
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(50.0)),
-                    hintText: "Family Religion"),
-              )
+                    hintText: "Age"),
+              ),
+              SizedBox(
+                height: 30,
+              ),
+              TextField(
+                controller: gender_f,
+                decoration: InputDecoration(
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(50.0)),
+                    hintText: "Gender"),
+              ),
+              SizedBox(
+                height: 30,
+              ),
+              TextField(
+                controller: relation_f,
+                decoration: InputDecoration(
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(50.0)),
+                    hintText: "Relation"),
+              ),
+              SizedBox(
+                height: 30,
+              ),
+              TextField(
+                controller: aadhar_f,
+                decoration: InputDecoration(
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(50.0)),
+                    hintText: "Aadhar Number"),
+              ),
+              SizedBox(
+                height: 30,
+              ),
+              TextField(
+                controller: mobileNum_f,
+                decoration: InputDecoration(
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(50.0)),
+                    hintText: "Mobile Number"),
+              ),
             ],
           ),
         ),
