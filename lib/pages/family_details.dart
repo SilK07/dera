@@ -84,6 +84,16 @@ class _family_detailsState extends State<family_details> {
                         borderRadius: BorderRadius.circular(50.0)),
                     hintText: "Mobile Number"),
               ),
+              SizedBox(
+                height: 50,
+              ),
+              ElevatedButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/family_details');
+                  },
+                  child: Text(
+                    "Add Member",
+                  ))
             ],
           ),
         ),
