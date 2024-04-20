@@ -17,83 +17,89 @@ class _dera_detailsState extends State<dera_details> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Dera Details"),
-        centerTitle: true,
-      ),
-      body: Center(
-        child: Padding(
-          padding: const EdgeInsets.all(30.0),
-          child: ListView(
-            children: [
-              TextField(
-                controller: sheep,
-                decoration: InputDecoration(
-                    border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(50.0)),
-                    hintText: "Number Of Sheeps"),
-              ),
-              SizedBox(
-                height: 30,
-              ),
-              TextField(
-                controller: goat,
-                decoration: InputDecoration(
-                    border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(50.0)),
-                    hintText: "Number Of Goats"),
-              ),
-              SizedBox(
-                height: 30,
-              ),
-              TextField(
-                controller: horse,
-                decoration: InputDecoration(
-                    border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(50.0)),
-                    hintText: "Number Of Horses"),
-              ),
-              SizedBox(
-                height: 30,
-              ),
-              TextField(
-                controller: bull,
-                decoration: InputDecoration(
-                    border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(50.0)),
-                    hintText: "Number Of Bulls"),
-              ),
-              SizedBox(
-                height: 30,
-              ),
-              TextField(
-                controller: cow,
-                decoration: InputDecoration(
-                    border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(50.0)),
-                    hintText: "Number Of Cows"),
-              ),
-              SizedBox(
-                height: 30,
-              ),
-              TextField(
-                controller: ox,
-                decoration: InputDecoration(
-                    border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(50.0)),
-                    hintText: "Number Of OX"),
-              )
-            ],
+    return Container(
+      decoration: BoxDecoration(
+          image: DecorationImage(
+              image: AssetImage('assets/images/india.png'), fit: BoxFit.cover)),
+      child: Scaffold(
+        backgroundColor: Colors.transparent,
+        appBar: AppBar(
+          title: Text("Dera Details"),
+          centerTitle: true,
+        ),
+        body: Center(
+          child: Padding(
+            padding: const EdgeInsets.all(30.0),
+            child: ListView(
+              children: [
+                TextField(
+                  controller: sheep,
+                  decoration: InputDecoration(
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(50.0)),
+                      hintText: "Number Of Sheeps"),
+                ),
+                SizedBox(
+                  height: 30,
+                ),
+                TextField(
+                  controller: goat,
+                  decoration: InputDecoration(
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(50.0)),
+                      hintText: "Number Of Goats"),
+                ),
+                SizedBox(
+                  height: 30,
+                ),
+                TextField(
+                  controller: horse,
+                  decoration: InputDecoration(
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(50.0)),
+                      hintText: "Number Of Horses"),
+                ),
+                SizedBox(
+                  height: 30,
+                ),
+                TextField(
+                  controller: bull,
+                  decoration: InputDecoration(
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(50.0)),
+                      hintText: "Number Of Bulls"),
+                ),
+                SizedBox(
+                  height: 30,
+                ),
+                TextField(
+                  controller: cow,
+                  decoration: InputDecoration(
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(50.0)),
+                      hintText: "Number Of Cows"),
+                ),
+                SizedBox(
+                  height: 30,
+                ),
+                TextField(
+                  controller: ox,
+                  decoration: InputDecoration(
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(50.0)),
+                      hintText: "Number Of OX"),
+                )
+              ],
+            ),
           ),
         ),
-      ),
-      bottomNavigationBar: BottomAppBar(
-        child: ElevatedButton(
-            onPressed: () {
-              Navigator.pushNamed(context, '/home_page');
-            },
-            child: Text('Submit')),
+        bottomNavigationBar: BottomAppBar(
+          child: ElevatedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/home_page');
+              },
+              child: Text('Submit')),
+        ),
       ),
     );
   }

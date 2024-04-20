@@ -3,19 +3,25 @@ import 'package:flutter/material.dart';
 class profile_page extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('My Profile'),
-      ),
-      body: SingleChildScrollView(
-        child: Center(
-          child: Column(
-            children: [
-              // Profile picture section
-              buildProfilePicture(),
-              // User information section
-              buildUserInfo(),
-            ],
+    return Container(
+      decoration: BoxDecoration(
+          image: DecorationImage(
+              image: AssetImage('assets/images/india.png'), fit: BoxFit.cover)),
+      child: Scaffold(
+        backgroundColor: Colors.transparent,
+        appBar: AppBar(
+          title: Text('My Profile'),
+        ),
+        body: SingleChildScrollView(
+          child: Center(
+            child: Column(
+              children: [
+                // Profile picture section
+                buildProfilePicture(),
+                // User information section
+                buildUserInfo(),
+              ],
+            ),
           ),
         ),
       ),
